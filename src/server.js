@@ -2,13 +2,17 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 
-import { getAnagrams } from './anagrams';
+import getAnagrams from './anagrams';
+import setStore from './store';
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+
+// set the store containg all anagrams key/values
+const anaStore = setStore();
 
 // uncomment for REST/json only endpoints
 // app.use('/*', (req, res, next) => {
@@ -31,7 +35,7 @@ app.get('/:words', async (req, res) => {
   const {
     params: { words }
   } = req;
-  res.send(await getAnagrams({ words }));
+  res.send(await getAnagrams({ anaStore, words }));
 });
 
 // catch all for unknown endpoints
