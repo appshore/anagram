@@ -25,6 +25,7 @@ const ana = []; // array of all anagrams
 // file is read only once
 // to generate a unique key per anagram
 // then use the key to store all the potential values for an anagram
+// ideally we should store these data in a key/value db like Redis.
 while ((lin = liner.next())) {
   const line = lin.toString('ascii');
   const sorted = anaKey(line);
