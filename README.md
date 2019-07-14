@@ -1,5 +1,7 @@
 # Anagram from a wordlist
 
+## Installation
+
 - Node.js/Express server
 - Port 3000 configurable in .env
 
@@ -21,7 +23,7 @@ yarn test
 yarn lint
 ```
 
-# From a browser, postman or curl
+## Running the application from a browser, postman or curl
 
 - One word
 ```
