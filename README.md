@@ -9,8 +9,14 @@
 # Install dependencies
 yarn
 
+# Build server
+yarn build
+
 # Start server
 yarn start
+
+# Start server in dev mode with nodemon
+yarn dev
 
 # Debug server
 yarn debug:map
