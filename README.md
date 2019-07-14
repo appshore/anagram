@@ -20,3 +20,33 @@ yarn test
 # Lint
 yarn lint
 ```
+
+# From a browser, postman or curl
+
+- One word
+```
+http://localhost:3000/crepitus
+
+{"crepitus":["cuprites","pictures","piecrust"]}
+```
+
+- Two words
+```
+http://localhost:3000/crepitus,pates
+
+{"crepitus":["cuprites","pictures","piecrust"],"pates":["paste","peats","septa","spate","tapes","tepas"]}
+```
+
+- One unknown word
+```
+http://localhost:3000/sdfwehrtgegfg
+
+{"sdfwehrtgegfg":[]}
+```
+
+- Three words, one being unknown
+```
+http://localhost:3000/sdfwehrtgegfg,crepitus,pates
+
+{"sdfwehrtgegfg":[],"crepitus":["cuprites","pictures","piecrust"],"pates":["paste","peats","septa","spate","tapes","tepas"]}```
+
