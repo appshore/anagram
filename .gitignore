@@ -10,6 +10,7 @@ yarn-error.log*
 
 # Dependency directories
 node_modules/
+dist/
 
 # dotenv environment variables file
 .env.test
